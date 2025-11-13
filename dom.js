@@ -27,6 +27,35 @@ function UjPHozzaad() {
 }
 
 function cssHozzaad() {
-    const head = document.getElementsByTagName("head");
-    
+    //barmilyen p ami egy div belsejeben van
+    const divBenP = document.querySelectorAll("div p");
+    divBenP.forEach(function(p){
+        p.style.color = "blue";
+    })
+
+    // minden p ami div gyereke
+    const divChildP = document.querySelectorAll("div > p");
+    divChildP.forEach(function(p){
+        p.style.fontWeight = "bold";
+    })
+
+    // minden p ami div testvere
+    const divTesoP = document.querySelectorAll("div ~ p");
+    divTesoP.forEach(function(p){
+        p.style.textDecoration = "underline";
+    })
+
+    // minden p ami div masodik gyereke
+    const divMasodikP = document.querySelectorAll("p:nth-child(3)");
+    divMasodikP.forEach(function(p){
+        p.style.backgroundColor = "lightyellow";
+    })
+
+    // minden masodik p testver
+    const divMasodikTesoP = document.querySelectorAll("p:nth-of-type(2)");
+    divMasodikTesoP.forEach(function(p){
+        p.style.border = "1px red solid";
+    })
+
+
 }
