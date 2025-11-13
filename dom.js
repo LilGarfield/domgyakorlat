@@ -14,5 +14,19 @@ function ujDivHozzaad() {
 function UjPHozzaad() {
     const p = document.createElement("p");
     const container = document.getElementById("container");
+    const divek = container.getElementsByTagName("div");
+    const utolsoDiv = divek[divek.length-1];
+    p.innerHTML = "Ez egy bekezdés";
+    
+    if (divek.length > 0) {
+        utolsoDiv.appendChild(p);
+    }
+    else{
+        alert("Először hozzon létre egy div-et");
+    }
+}
+
+function cssHozzaad() {
+    const head = document.getElementsByTagName("head");
     
 }
